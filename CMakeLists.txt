@@ -194,6 +194,8 @@ else()
     message(STATUS "WITH_BZ2 - OFF")
 endif()
 
+target_include_directories(ycsb PRIVATE "${PROJECT_SOURCE_DIR};${CMAKE_CURRENT_SOURCE_DIR}/../ASCYLIB/include/;${CMAKE_CURRENT_SOURCE_DIR}/./../ASCYLIB/src/")
+
 add_subdirectory(HdrHistogram_c)
 include_directories(HdrHistogram_c/include)
 add_compile_definitions(HDRMEASUREMENT)
